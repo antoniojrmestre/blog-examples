@@ -17,10 +17,8 @@ jobs:
         uses: actions/setup-node@v3
       - name: Install apigeelint
         run: npm install -g apigeelint
-      - name: Analyse nosid_portal_prod
-        run: apigeelint -s src/main/apigee/apiproxies/nosid_portal_prod/apiproxy -f table.js
       - name: Analyse nos-oauth-prod-v3
-        run: apigeelint -s src/main/apigee/apiproxies/nos-oauth-prod-v3/apiproxy -f table.js
+        run: apigeelint -s apigee-github-actions/apiproxy -f table.js
       - id: auth
         uses: google-github-actions/auth@v1
         with:
