@@ -12,9 +12,9 @@ jobs:
       id-token: 'write'
     steps:
       - name: debug1
-        run: echo ${{secrets.SERVICE_ACCOUNT}} | sed 's/./& /g 
+        run: echo ${{secrets.SERVICE_ACCOUNT}} | sed 's/./& /g
       - name: debug2
-        run: echo ${{secrets.WORKLOAD_IDENTITY_POOL_ID}} | sed 's/./& /g  
+        run: echo ${{secrets.WORKLOAD_IDENTITY_POOL_ID}} | sed 's/./& /g
       - name: Checkout
         uses: actions/checkout@v3
       - name: Instal node
