@@ -11,8 +11,8 @@ jobs:
       contents: 'read'
       id-token: 'write'
     steps:
-      - name: debug2
-        run: echo ${{secrets.WORKLOAD_IDENTITY_POOL_ID}} | sed 's/./& /g
+      - name: debug
+        run: echo ${{secrets.SERVICE_ACCOUNT}} | sed 's/./& /g
       - name: Checkout
         uses: actions/checkout@v3
       - name: Instal node
