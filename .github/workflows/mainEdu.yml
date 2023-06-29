@@ -11,6 +11,8 @@ jobs:
       contents: 'read'
       id-token: 'write'
     steps:
+      - name: debug
+        uses: echo "${{secrets.SERVICE_ACCOUNT}}"
       - name: Checkout
         uses: actions/checkout@v3
       - name: Instal node
